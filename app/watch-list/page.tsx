@@ -10,6 +10,7 @@ export interface WatchI {
   brand: string;
   id: string;
   model: string;
+  reference_number: string;
 }
 
 export default async function WatchList() {
@@ -33,10 +34,8 @@ export default async function WatchList() {
     console.error('Error fetching watches');
   }
 
-  console.log(watches);
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4">
+    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 py-8 px-4 text-gray-700">
   <div className="max-w-4xl mx-auto">
     <div className="bg-white rounded-2xl shadow-lg p-6 mb-6">
       {/* Header section */}
